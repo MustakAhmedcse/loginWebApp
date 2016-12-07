@@ -2,30 +2,337 @@
     ViewBag.Title = "Home Page";
 }
 
-<div class="jumbotron">
-    <h1>ASP.NET</h1>
-    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
-    <p><a href="http://asp.net" class="btn btn-primary btn-large">Learn more &raquo;</a></p>
+<!--        slider area-->
+<div class="slider-area">
+    <div class="container">
+        <div class="row no-gutter">
+            <div class="slider">
+                <img src="~/img/slider/slider4.jpg" class="img-responsive" alt="">
+                <!--
+                                    <div class="col-md-6">
+                                        <div class="main-menu">
+                                            <ul>
+                                                <li><a href="#"><font color="#ec7e06">HOME</font></a></li>
+                                                <li><a href="#">MEN</a></li>
+                                                <li><a href="#">WOMEN</a></li>
+                                                <li><a href="#">KIDS</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                -->
+                <div class="col-md-offset-6 col-md-6">
+                    <div class="slider-info">
+                        <h4>grab the best deals</h4>
+                        <a href="#product-list">
+                            <div class="button hvr-fade">
+                                <p>shop now</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
 
-<div class="row">
-    <div class="col-md-4">
-        <h2>Getting started</h2>
-        <p>
-            ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-            enables a clean separation of concerns and gives you full control over markup
-            for enjoyable, agile development.
-        </p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
+<!--Service and product facility -->
+
+
+<div class="facility">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 col-sm-4 col-xs-12">
+                <div class="facility-text1">
+                    <h4>Fast delivery</h4>
+                    <p>We assure the fastest delivery to your doorstep.</p>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-4 col-xs-12">
+                <div class="facility-text2">
+                    <h4>easy return</h4>
+                    <p>Easily exchange your purchased product if you find any problem.</p>
+                </div>
+            </div>
+            <div class="col-md-4 col-sm-4 col-xs-12">
+                <div class="facility-text3">
+                    <h4>24/7 service</h4>
+                    <p>We assure the fastest delivery to your doorstep.</p>
+                </div>
+            </div>
+        </div>
     </div>
-    <div class="col-md-4">
-        <h2>Get more libraries</h2>
-        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
+</div>
+
+<!--        featured product list title -->
+
+<a id="product-list"><div class="featured-product-area"></a>
+<div class="container">
+    <div class="row">
+        <div class="col-md-12">
+            <div class="featured-product-title">
+                <h4>featured <font color="#ec7e06">deals</font></h4>
+            </div>
+        </div>
     </div>
-    <div class="col-md-4">
-        <h2>Web Hosting</h2>
-        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-        <p><a class="btn btn-default" href="http://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
+</div>
+        </div>
+
+<!--       featured product list starts here-->
+
+<div class="product-list-row-1">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3 col-sm-4">
+                <div class="product1">
+                    <div class="product card">
+                        <div class="quote-black"><p>NEW</p></div>
+                        <div class="product-image">
+                            <div class="hovereffect">
+                                <img class="img-responsive" src="~/img/product_image/product1.jpg" alt="">
+                                <div class="overlay">
+                                    <a class="info" href="product_details.html">VIEW DETAILS</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-details">
+                            <div class="product-title">
+                                <p>MEN CASUAL</p>
+                                <h3>HUSH PUPPIES</h3>
+                            </div>
+                            <div class="product-price">
+                                <p><b>TK</b> &nbsp 1050</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-4">
+                <div class="product2 product1">
+                    <div class="quote-orange"><p>HOT</p></div>
+                    <div class="product card">
+                        <div class="product-image">
+                            <div class="hovereffect">
+                                <img class="img-responsive" src="~/img/product_image/product2.jpg" alt="">
+                                <div class="overlay">
+                                    <a class="info" href="#">VIEW DETAILS</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-details">
+                            <div class="product-title">
+                                <p>WOMEN LUXURY</p>
+                                <h3>JENNYS</h3>
+                            </div>
+                            <div class="product-price">
+                                <p><b>TK</b> &nbsp 1270</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-4">
+                <div class="product3 product1">
+                    <div class="product card">
+                        <div class="quote-black"><p>NEW</p></div>
+                        <div class="product-image">
+                            <div class="hovereffect">
+                                <img class="img-responsive" src="~/img/product_image/product3.jpg" alt="">
+                                <div class="overlay">
+                                    <a class="info" href="#">VIEW DETAILS</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-details">
+                            <div class="product-title">
+                                <p>SPORT SHOE</p>
+                                <h3>NIKE</h3>
+                            </div>
+                            <div class="product-price">
+                                <p><b>TK</b> &nbsp 1120</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div><div class="col-md-3 col-sm-4">
+                <div class="product4 product1">
+                    <div class="product card">
+                        <div class="quote-black"><p>NEW</p></div>
+                        <div class="product-image">
+                            <div class="hovereffect">
+                                <img class="img-responsive" src="~/img/product_image/product4.jpg" alt="">
+                                <div class="overlay">
+                                    <a class="info" href="#">VIEW DETAILS</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-details">
+                            <div class="product-title">
+                                <p>SPORT SHOE</p>
+                                <h3>NIKE</h3>
+                            </div>
+                            <div class="product-price">
+                                <p><b>TK</b> &nbsp 1120</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-3 col-sm-4">
+                <div class="product5 product1">
+                    <div class="product card">
+                        <div class="quote-orange"><p>HOT</p></div>
+                        <div class="product-image">
+                            <div class="hovereffect">
+                                <img class="img-responsive" src="~/img/product_image/product1.jpg" alt="">
+                                <div class="overlay">
+                                    <a class="info" href="#">VIEW DETAILS</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-details">
+                            <div class="product-title">
+                                <p>MEN CASUAL</p>
+                                <h3>HUSH PUPPIES</h3>
+                            </div>
+                            <div class="product-price">
+                                <p><b>TK</b> &nbsp 1050</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-4">
+                <div class="product6 product1">
+                    <div class="product card">
+                        <div class="quote-black"><p>NEW</p></div>
+                        <div class="product-image">
+                            <div class="hovereffect">
+                                <img class="img-responsive" src="~/img/product_image/product2.jpg" alt="">
+                                <div class="overlay">
+                                    <a class="info" href="#">VIEW DETAILS</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-details">
+                            <div class="product-title">
+                                <p>WOMEN LUXURY</p>
+                                <h3>JENNYS</h3>
+                            </div>
+                            <div class="product-price">
+                                <p><b>TK</b> &nbsp 1270</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3 col-sm-4">
+                <div class="product7 product1">
+                    <div class="product card">
+                        <div class="quote-black"><p>NEW</p></div>
+                        <div class="product-image">
+                            <div class="hovereffect">
+                                <img class="img-responsive" src="~/img/product_image/product3.jpg" alt="">
+                                <div class="overlay">
+                                    <a class="info" href="#">VIEW DETAILS</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-details">
+                            <div class="product-title">
+                                <p>SPORT SHOE</p>
+                                <h3>NIKE</h3>
+                            </div>
+                            <div class="product-price">
+                                <p><b>TK</b> &nbsp 1120</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div><div class="col-md-3 col-sm-4">
+                <div class="product8 product1">
+                    <div class="product card">
+                        <div class="quote-orange"><p>HOT</p></div>
+                        <div class="product-image">
+                            <div class="hovereffect">
+                                <img class="img-responsive" src="~/img/product_image/product4.jpg" alt="">
+                                <div class="overlay">
+                                    <a class="info" href="#">VIEW DETAILS</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-details">
+                            <div class="product-title">
+                                <p>SPORT SHOE</p>
+                                <h3>NIKE</h3>
+                            </div>
+                            <div class="product-price">
+                                <p><b>TK</b> &nbsp 1120</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="blank-space"></div>
+
+<div class="featured-product-area">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="featured-product-title">
+                    <h4>winter <font color="#ec7e06">deals</font></h4>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="occasional-promotion">
+    <div class="occasional-promotion-area">
+        <a href="#">
+            <div class="occasional-promotion-area-text-bg">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-md-7 col-sm-6">
+                            <div class="occasional-promotion-area-text">
+                                <h4>winter is here</h4>
+                                <p>check out our wide range of winter collection</p>
+                            </div>
+                        </div>
+                        <div class="col-md-offset-1 col-sm-5 col-md-4  hidden-xs">
+                            <div class="occasional-promotion-img-box">
+                                <img src="~/img/winter/banner-pic.jpg" alt="">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </a>
+    </div>
+</div>
+
+<div class="newsletter">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-3">
+                <div class="newsletter-title">
+                    <h4>SUBSCRIBE NEWSLETTER</h4>
+                </div>
+            </div>
+            <div class="col-md-7">
+                <div class="newsletter-text-box">
+                    <div class="input-group">
+                        <input type="text" class="form-control" placeholder="ENTER YOUR EMAIL" aria-describedby="basic-addon1">
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-2">
+                <a href="#"><div class="newsletter-button hvr-float-shadow">SUBSCRIBE</div></a>
+            </div>
+
+        </div>
     </div>
 </div>

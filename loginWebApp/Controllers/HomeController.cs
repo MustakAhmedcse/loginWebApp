@@ -31,5 +31,26 @@ namespace loginWebApp.Controllers
         {
             return View();
         }
+        
+
+
+
+        public ActionResult Men()
+        {
+            return View();
+        }
+        public ActionResult Women()
+        {
+            return View();
+        }
+        public ActionResult Kids()
+        {
+            return View();
+        }
+
+        public ActionResult Product_details()
+        {
+            return View();
+        }
     }
 }

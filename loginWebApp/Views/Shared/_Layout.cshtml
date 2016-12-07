@@ -1,53 +1,193 @@
 ﻿<!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>@ViewBag.Title - My ASP.NET Application</title>
-    @Styles.Render("~/Content/css")
-    @Scripts.Render("~/bundles/modernizr")
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <title>Padukabazar | Online Shoe Store</title>
+    <link href="~/Content/CustomCSS/bootstrap.css" rel="stylesheet" />
+    <link href="~/Content/CustomCSS/bootstrap.min.css" rel="stylesheet" />
+    <link href="~/Content/CustomCSS/dropdown.css" rel="stylesheet" />
+    <link href="~/Content/CustomCSS/hover.css" rel="stylesheet" />
+    <link href="~/Content/CustomCSS/icofont.css" rel="stylesheet" />
+    <link href="~/Content/CustomCSS/image-hover.css" rel="stylesheet" />
+    <link href="~/Content/CustomCSS/material-box.css" rel="stylesheet" />
+    <link href="~/Content/CustomCSS/responsive.css" rel="stylesheet" />
+    <link href="~/Content/CustomCSS/style.css" rel="stylesheet" />
+    @*<link href="css/bootstrap.css" rel="stylesheet">
+        <link href="css/bootstrap.min.css" rel="stylesheet">
+        <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
+        <link href="style.css" rel="stylesheet">
+        <link href="css/responsive.css" rel="stylesheet">
+        <link href="css/icofont.css" rel="stylesheet">
+        <link href="css/hover.css" rel="stylesheet">
+        <link href="css/image-hover.css" rel="stylesheet">
+        <link href="css/material-box.css" rel="stylesheet">
+        <link href="css/dropdown.css" rel="stylesheet">*@
+    <link href="http://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Anton" rel="stylesheet">
+    <link href="css/image-hover.css" rel="stylesheet">
+
+    <!--[if lt IE 9]>
+    <script src="//oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+    <script src="//oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
 
 </head>
 <body>
-    <div class="navbar navbar-inverse navbar-fixed-top">
-        <div class="container">
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                @Html.ActionLink("Application name", "Index", "Home", null, new { @class = "navbar-brand" })
-            </div>
-            <div class="navbar-collapse collapse">
-                <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("About", "About", "Home")</li>
-                    @if (User.Identity.IsAuthenticated)
-                    {
-                        if (User.IsInRole("SuperUser")||User.IsInRole("Admin"))
-                        {
-                         <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
-                        }
-                        
-                        if (User.IsInRole("Admin"))
-                         {
-                             <li>@Html.ActionLink("Admin Palal", "AdminPanal", "Home")</li>
-                         }
-                    }
-                </ul>
+    <div class="top-area navbar-fixed-top">
+        <div class="container container-border">
+            <div class="row no-gutter">
+                <div class="col-md-2">
+                    <div class="logo">
+
+                        <a href=""><img src="~/img/logo.png" alt=""></a>
+                    </div>
+                </div>
+                <div class="col-md-6 hidden-xs">
+                    <div class="main-menu">
+                        <ul>
+                            <li><a href="@Url.Action("Index","Home")"><font color="#ec7e06">HOME</font></a></li>
+                            <li><a href="@Url.Action("Men","Home")">MEN</a></li>
+                            <li><a href="@Url.Action("Women","Home")">WOMEN</a></li>
+                            <li><a href="@Url.Action("Kids","Home")">KIDS</a></li>
+                            @if (User.Identity.IsAuthenticated)
+                            {
+                                if (User.IsInRole("SuperUser") || User.IsInRole("Admin"))
+                                {
+                                    <li><a href="@Url.Action("Contact","Home")">Order</a></li>
+                                }
+
+                                if (User.IsInRole("Admin"))
+                                {
+                                    <li><a href="@Url.Action("AdminPanal","Home")">Admin Panel</a></li>
+                                }
+                            }
+                        </ul>
+                    </div>
+                </div>
+
+                <!--                    dropdown menu in small display-->
+
+                <div class="col-xs-1 hidden-sm hidden-md hidden-lg">
+                    <div class="dropdown">
+                        <button class="dropbtn"> <i class="fa fa-reorder fa-lg"></i> </button>
+                        <div class="dropdown-content">
+                            <a href="#">HOME</a>
+                            <a href="#">MEN</a>
+                            <a href="#">WOMEN</a>
+                            <a href="#">KIDS</a>
+                        </div>
+                    </div>
+                </div>
+
+
+                <!--                    dropdown menu in small display-->
+                <!--
+                                    <div class="col-md-4">
+                                        <div class="top-area-content hidden-md hidden-xs">
+                                            <div class="contact-section">
+                                                <p><font color="#ec7e06"><i class="icofont icofont-ui-call"></i></font>&nbsp;&nbsp;+88-01711223344</p>
+
+                                                <p><font color="#ec7e06"><i class="icofont icofont-clock-time"></i></font>&nbsp;&nbsp;10 am - 8 pm</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                -->
+                <!--                        cart and login-->
+                @*<div class="col-md-4">
+                        <div class="user-section">
+                            <ul>
+                                <li>
+                                    <a href="#"><h4><i class="icofont icofont-cart"></i></h4></a>
+                                </li>
+                                <li class="dropdown-cart">
+                                    <a href="#"><h4><i class="icofont icofont-user"></i></h4></a><div class="dropdown-cart-content">
+                                        <div class="cart-items">
+                                            <p><a href="#">Login </a></p>
+
+                                            <a href="#">
+                                                <div class="checkout-btn">
+                                                    <h4>Sign Up</h4><i class="fa fa-user-plus"></i>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+
+                                                <div class="user-section">
+                                                    <ul>
+                                                        <li><div class="icofont-cart dropdown-cart"></div><div class="dropdown-cart-content">
+                                                                <a href="#">Link 1</a>
+                                                                <a href="#">Link 2</a>
+                                                                <a href="#" class="checkout-btn">CHECKOUT</a>
+                                                                </div></div> <a href="#"><h4></h4></a><div class="cart-status"><p>4</p></div>
+                                                        </li>
+                                                        <li class="icofont-user-alt-4"></li>
+                                                    </ul>
+                                               </div>
+
+                    </div>*@
                 @Html.Partial("_LoginPartial")
             </div>
         </div>
     </div>
+
+
     <div class="container body-content">
         @RenderBody()
         <hr />
         <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+            <div class="footer">
+                <div class="container">
+                    <div class="row">
+                        <div class="footer-area">
+                            <div class="col-md-5">
+                                <div class="contact-info">
+                                    <img src="~/img/logo.png" alt="">
+                                    <p>Padukabazar is commited to provide you the best leather shoes at the best prices</p>
+                                    <ul>
+                                        <li><i class="icofont icofont-telephone"></i>+88-01711223344</li>
+                                        <li><i class="icofont icofont-email"></i>support@padukabazar.com</li>
+                                        <li><i class="icofont icofont-ui-clock"></i>08:00 am - 10:00 pm Sat - Thu (Friday Closed)</li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-md-offset-1 col-md-3">
+                                <div class="information">
+                                    <h4>INFORMATION</h4>
+                                    <ul>
+                                        <li><a href="#">About Us</a></li>
+                                        <li><a href="#">Shopping and Return</a></li>
+                                        <li><a href="#">Privacy Policy</a></li>
+                                        <li><a href="#">Conditions to Use</a></li>
+                                        <li><a href="#">RSS</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="col-md-3">
+                                <div class="my-account information">
+                                    <h4>MY ACCOUNT</h4>
+                                    <ul>
+                                        <li><a href="#">My Profile</a></li>
+                                        <li><a href="#">Wish List</a></li>
+                                        <li><a href="#">My Stat</a></li>
+                                        <li><a href="#">Site Map</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </footer>
     </div>
-
+    <script src="~/Scripts/Customjs/main.js"></script>
+    <script src="~/Scripts/Customjs/npm.js"></script>
     @Scripts.Render("~/bundles/jquery")
     @Scripts.Render("~/bundles/bootstrap")
     @RenderSection("scripts", required: false)

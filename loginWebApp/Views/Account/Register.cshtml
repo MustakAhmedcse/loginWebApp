@@ -1,40 +1,76 @@
 ﻿@model loginWebApp.Models.RegisterViewModel
-@{
-    ViewBag.Title = "Register";
-}
-
-<h2>@ViewBag.Title.</h2>
-
 @using (Html.BeginForm("Register", "Account", FormMethod.Post, new { @class = "form-horizontal", role = "form" }))
 {
     @Html.AntiForgeryToken()
-    <h4>Create a new account.</h4>
-    <hr />
-    @Html.ValidationSummary()
-    <div class="form-group">
-        @Html.LabelFor(m => m.UserName, new { @class = "col-md-2 control-label" })
-        <div class="col-md-10">
-            @Html.TextBoxFor(m => m.UserName, new { @class = "form-control" })
+
+
+
+    <!--login area -->
+    <div class="registration-area">
+        <div class="container">
+            <div align="center" id="registration">
+                @Html.ValidationSummary(true)
+            </div>
+            <div class="row no-gutter">
+                <div class="col-md-4 col-md-offset-4">
+                    <div class="login-title">
+                        <h4>Registration</h4>
+                    </div>
+                </div>
+            </div>
+            <div class="row no-gutter">
+                <div class="col-md-4 col-md-offset-4">
+                    <div class="registration-holder">
+                        <div class="login-form" id="registrationfrom">
+                            <p>User Name</p>
+                            <div class="input-group">
+                                <input type="text" name="UserName" id="UserName" class="form-control login-input-group login-form-control" placeholder="enter your user name" aria-describedby="basic-addon1">
+                                <div>
+                                    @Html.ValidationMessageFor(m => m.UserName)
+                                </div>
+                            </div>
+                            @*<p>Email</p>
+                            <div class="input-group">
+                                <input type="text" name="Email" id="Email" class="form-control login-input-group login-form-control" placeholder="enter your email address" aria-describedby="basic-addon1">
+                                <div>
+                                    @Html.ValidationMessageFor(m => m.Email)
+                                </div>
+                            </div>*@
+                            <p>Password</p>
+                            <div class="input-group">
+                                <input type="password" name="Password" id="Password" class="form-control login-input-group login-form-control" placeholder="enter your password" aria-describedby="basic-addon1">
+                                @Html.ValidationMessageFor(m => m.Password)
+                            </div>
+                            <p>Confirm Password</p>
+                            <div class="input-group">
+                                <input type="password" name="ConfirmPassword" id="ConfirmPassword" class="form-control login-input-group login-form-control" placeholder="re-enter your password" aria-describedby="basic-addon1">
+                                @Html.ValidationMessageFor(m => m.ConfirmPassword)
+                            </div>
+                            <input type="submit" value="Register" class="registration-button hvr-float-shadow" />
+                            <p style="font-size:14px">Already got an account? <a href="@Url.Action("Login","Account")" style="text-decoration:underline; color:#00ba93">Login</a></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-    <div class="form-group">
-        @Html.LabelFor(m => m.Password, new { @class = "col-md-2 control-label" })
-        <div class="col-md-10">
-            @Html.PasswordFor(m => m.Password, new { @class = "form-control" })
-        </div>
-    </div>
-    <div class="form-group">
-        @Html.LabelFor(m => m.ConfirmPassword, new { @class = "col-md-2 control-label" })
-        <div class="col-md-10">
-            @Html.PasswordFor(m => m.ConfirmPassword, new { @class = "form-control" })
-        </div>
-    </div>
-    <div class="form-group">
-        <div class="col-md-offset-2 col-md-10">
-            <input type="submit" class="btn btn-default" value="Register" />
-        </div>
-    </div>
+    <!--login area -->
+
 }
+@*<script>
+        $(document).ready(function () {
+            $("#registration").validate({
+
+                rules: {
+
+                },
+                messages:
+            {
+
+            }
+            });
+        });
+    </script>*@
 
 @section Scripts {
     @Scripts.Render("~/bundles/jqueryval")
